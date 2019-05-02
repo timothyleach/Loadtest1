@@ -1,0 +1,764 @@
+2019-05-02 08:49:30,127 [1] INFO  UserLogger [(null)] - Loaded appender: FileAppenderInternal
+2019-05-02 08:49:30,130 [1] INFO  UserLogger [(null)] - Loaded appender: UserLoggerAppender
+2019-05-02 08:49:30,131 [1] INFO  UserLogger [(null)] - Loaded appender: FileAppenderExternal
+2019-05-02 08:49:30,131 [1] INFO  UserLogger [(null)] - Loaded appender: LRAppender
+2019-05-02 08:49:30,131 [1] INFO  UserLogger [(null)] - Loaded appender: FileAppenderInternal
+2019-05-02 08:49:30,131 [1] INFO  UserLogger [(null)] - Loaded appender: UserLoggerAppender
+2019-05-02 08:49:30,131 [1] INFO  UserLogger [(null)] - Loaded appender: FileAppenderExternal
+2019-05-02 08:49:30,131 [1] INFO  UserLogger [(null)] - Loaded appender: LRAppender
+2019-05-02 08:49:30,453 [9] INFO  UserLogger [(null)] - Step 'Start' : Step 'Start' started
+2019-05-02 08:49:30,457 [9] DEBUG UserLogger [(null)] - Step 'Start' : Parent Step: 'test'
+2019-05-02 08:49:30,476 [9] INFO  UserLogger [(null)] - Step 'Start' ended successfully
+2019-05-02 08:49:30,479 [9] INFO  UserLogger [(null)] - Step 'Test Flow' : Step 'Test Flow' started
+2019-05-02 08:49:30,480 [9] DEBUG UserLogger [(null)] - Step 'Test Flow' : Parent Step: 'test'
+2019-05-02 08:49:30,738 [9] INFO  UserLogger [(null)] - Step 'Iteration 1' : Step 'Iteration 1' started
+2019-05-02 08:49:30,739 [9] DEBUG UserLogger [(null)] - Step 'Iteration 1' : Parent Step: 'Loop2'
+2019-05-02 08:49:30,740 [9] INFO  UserLogger [(null)] - Step 'GetFlights' : Step 'GetFlights' started
+2019-05-02 08:49:30,741 [9] DEBUG UserLogger [(null)] - Step 'GetFlights' : Parent Step: 'Sequence6'
+2019-05-02 08:49:30,751 [9] INFO  UserLogger [(null)] - 
+Request:
+
+<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
+  <Body>
+    <GetFlights xmlns="HP.SOAQ.SampleApp">
+      <DepartureCity>San Francisco</DepartureCity>
+      <ArrivalCity>Los Angeles</ArrivalCity>
+      <FlightDate>2020-09-02T00:00:00-06:00</FlightDate>
+    </GetFlights>
+  </Body>
+</Envelope>
+
+2019-05-02 08:49:30,760 [9] DEBUG UserLogger [(null)] - Encoding channel is processing the message
+2019-05-02 08:49:30,762 [9] DEBUG UserLogger [(null)] - Sending the following message: <Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
+  <Body>
+    <GetFlights xmlns="HP.SOAQ.SampleApp">
+      <DepartureCity>San Francisco</DepartureCity>
+      <ArrivalCity>Los Angeles</ArrivalCity>
+      <FlightDate>2020-09-02T00:00:00-06:00</FlightDate>
+    </GetFlights>
+  </Body>
+</Envelope>
+2019-05-02 08:49:30,763 [9] DEBUG UserLogger [(null)] - HTTP channel is processing the message
+2019-05-02 08:49:30,767 [9] INFO  UserLogger [(null)] - URL: http://localhost:8000/HPFlights_SOAP
+2019-05-02 08:49:30,773 [9] DEBUG UserLogger [(null)] - Sending the request to the server
+2019-05-02 08:49:30,776 [9] DEBUG UserLogger [(null)] - 
+
+Request after processing:
+
+<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
+  <Body>
+    <GetFlights xmlns="HP.SOAQ.SampleApp">
+      <DepartureCity>San Francisco</DepartureCity>
+      <ArrivalCity>Los Angeles</ArrivalCity>
+      <FlightDate>2020-09-02T00:00:00-06:00</FlightDate>
+    </GetFlights>
+  </Body>
+</Envelope>
+
+
+2019-05-02 08:49:30,791 [9] INFO  UserLogger [(null)] - Returning the response to the previous channel
+2019-05-02 08:49:30,792 [9] DEBUG UserLogger [(null)] - HTTP channel - done
+2019-05-02 08:49:30,793 [9] DEBUG UserLogger [(null)] - Received the following message: <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Body><GetFlightsResponse xmlns="HP.SOAQ.SampleApp"><GetFlightsResult xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><Flight><Airline>TWA</Airline><ArrivalCity>Los Angeles</ArrivalCity><ArrivalTime>01:41 PM</ArrivalTime><DepartureCity>San Francisco</DepartureCity><DepartureTime>12:57 PM</DepartureTime><FlightNumber>1657</FlightNumber><Price>110</Price></Flight><Flight><Airline>TWA</Airline><ArrivalCity>Los Angeles</ArrivalCity><ArrivalTime>08:53 AM</ArrivalTime><DepartureCity>San Francisco</DepartureCity><DepartureTime>08:09 AM</DepartureTime><FlightNumber>2111</FlightNumber><Price>126.4</Price></Flight><Flight><Airline>AA</Airline><ArrivalCity>Los Angeles</ArrivalCity><ArrivalTime>08:45 AM</ArrivalTime><DepartureCity>San Francisco</DepartureCity><DepartureTime>08:00 AM</DepartureTime><FlightNumber>3211</FlightNumber><Price>104.6</Price></Flight><Flight><Airline>AA</Airline><ArrivalCity>Los Angeles</ArrivalCity><ArrivalTime>11:09 AM</ArrivalTime><DepartureCity>San Francisco</DepartureCity><DepartureTime>10:24 AM</DepartureTime><FlightNumber>3215</FlightNumber><Price>104.2</Price></Flight><Flight><Airline>UA</Airline><ArrivalCity>Los Angeles</ArrivalCity><ArrivalTime>01:54 PM</ArrivalTime><DepartureCity>San Francisco</DepartureCity><DepartureTime>10:24 AM</DepartureTime><FlightNumber>3216</FlightNumber><Price>173.47</Price></Flight><Flight><Airline>DL</Airline><ArrivalCity>Los Angeles</ArrivalCity><ArrivalTime>02:18 PM</ArrivalTime><DepartureCity>San Francisco</DepartureCity><DepartureTime>12:48 PM</DepartureTime><FlightNumber>3218</FlightNumber><Price>174.47</Price></Flight><Flight><Airline>AA</Airline><ArrivalCity>Los Angeles</ArrivalCity><ArrivalTime>01:33 PM</ArrivalTime><DepartureCity>San Francisco</DepartureCity><DepartureTime>12:48 PM</DepartureTime><FlightNumber>3219</FlightNumber><Price>100.3</Price></Flight><Flight><Airline>AA</Airline><ArrivalCity>Los Angeles</ArrivalCity><ArrivalTime>03:57 PM</ArrivalTime><DepartureCity>San Francisco</DepartureCity><DepartureTime>03:12 PM</DepartureTime><FlightNumber>3223</FlightNumber><Price>177.47</Price></Flight><Flight><Airline>TWA</Airline><ArrivalCity>Los Angeles</ArrivalCity><ArrivalTime>05:17 PM</ArrivalTime><DepartureCity>San Francisco</DepartureCity><DepartureTime>04:33 PM</DepartureTime><FlightNumber>5353</FlightNumber><Price>126.4</Price></Flight><Flight><Airline>AA</Airline><ArrivalCity>Los Angeles</ArrivalCity><ArrivalTime>01:24 PM</ArrivalTime><DepartureCity>San Francisco</DepartureCity><DepartureTime>10:24 AM</DepartureTime><FlightNumber>6214</FlightNumber><Price>174.47</Price></Flight><Flight><Airline>TWA</Airline><ArrivalCity>Los Angeles</ArrivalCity><ArrivalTime>06:29 PM</ArrivalTime><DepartureCity>San Francisco</DepartureCity><DepartureTime>05:45 PM</DepartureTime><FlightNumber>6996</FlightNumber><Price>109.6</Price></Flight><Flight><Airline>TWA</Airline><ArrivalCity>Los Angeles</ArrivalCity><ArrivalTime>10:05 AM</ArrivalTime><DepartureCity>San Francisco</DepartureCity><DepartureTime>09:21 AM</DepartureTime><FlightNumber>7056</FlightNumber><Price>100.4</Price></Flight><Flight><Airline>TWA</Airline><ArrivalCity>Los Angeles</ArrivalCity><ArrivalTime>11:17 AM</ArrivalTime><DepartureCity>San Francisco</DepartureCity><DepartureTime>10:33 AM</DepartureTime><FlightNumber>7174</FlightNumber><Price>124.8</Price></Flight><Flight><Airline>TWA</Airline><ArrivalCity>Los Angeles</ArrivalCity><ArrivalTime>04:05 PM</ArrivalTime><DepartureCity>San Francisco</DepartureCity><DepartureTime>03:21 PM</DepartureTime><FlightNumber>8753</FlightNumber><Price>175.47</Price></Flight></GetFlightsResult></GetFlightsResponse></s:Body></s:Envelope>
+2019-05-02 08:49:30,794 [9] DEBUG UserLogger [(null)] - Encoding channel - done
+2019-05-02 08:49:30,797 [9] INFO  UserLogger [(null)] - 
+Response:
+
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Body>
+    <GetFlightsResponse xmlns="HP.SOAQ.SampleApp">
+      <GetFlightsResult xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+        <Flight>
+          <Airline>TWA</Airline>
+          <ArrivalCity>Los Angeles</ArrivalCity>
+          <ArrivalTime>01:41 PM</ArrivalTime>
+          <DepartureCity>San Francisco</DepartureCity>
+          <DepartureTime>12:57 PM</DepartureTime>
+          <FlightNumber>1657</FlightNumber>
+          <Price>110</Price>
+        </Flight>
+        <Flight>
+          <Airline>TWA</Airline>
+          <ArrivalCity>Los Angeles</ArrivalCity>
+          <ArrivalTime>08:53 AM</ArrivalTime>
+          <DepartureCity>San Francisco</DepartureCity>
+          <DepartureTime>08:09 AM</DepartureTime>
+          <FlightNumber>2111</FlightNumber>
+          <Price>126.4</Price>
+        </Flight>
+        <Flight>
+          <Airline>AA</Airline>
+          <ArrivalCity>Los Angeles</ArrivalCity>
+          <ArrivalTime>08:45 AM</ArrivalTime>
+          <DepartureCity>San Francisco</DepartureCity>
+          <DepartureTime>08:00 AM</DepartureTime>
+          <FlightNumber>3211</FlightNumber>
+          <Price>104.6</Price>
+        </Flight>
+        <Flight>
+          <Airline>AA</Airline>
+          <ArrivalCity>Los Angeles</ArrivalCity>
+          <ArrivalTime>11:09 AM</ArrivalTime>
+          <DepartureCity>San Francisco</DepartureCity>
+          <DepartureTime>10:24 AM</DepartureTime>
+          <FlightNumber>3215</FlightNumber>
+          <Price>104.2</Price>
+        </Flight>
+        <Flight>
+          <Airline>UA</Airline>
+          <ArrivalCity>Los Angeles</ArrivalCity>
+          <ArrivalTime>01:54 PM</ArrivalTime>
+          <DepartureCity>San Francisco</DepartureCity>
+          <DepartureTime>10:24 AM</DepartureTime>
+          <FlightNumber>3216</FlightNumber>
+          <Price>173.47</Price>
+        </Flight>
+        <Flight>
+          <Airline>DL</Airline>
+          <ArrivalCity>Los Angeles</ArrivalCity>
+          <ArrivalTime>02:18 PM</ArrivalTime>
+          <DepartureCity>San Francisco</DepartureCity>
+          <DepartureTime>12:48 PM</DepartureTime>
+          <FlightNumber>3218</FlightNumber>
+          <Price>174.47</Price>
+        </Flight>
+        <Flight>
+          <Airline>AA</Airline>
+          <ArrivalCity>Los Angeles</ArrivalCity>
+          <ArrivalTime>01:33 PM</ArrivalTime>
+          <DepartureCity>San Francisco</DepartureCity>
+          <DepartureTime>12:48 PM</DepartureTime>
+          <FlightNumber>3219</FlightNumber>
+          <Price>100.3</Price>
+        </Flight>
+        <Flight>
+          <Airline>AA</Airline>
+          <ArrivalCity>Los Angeles</ArrivalCity>
+          <ArrivalTime>03:57 PM</ArrivalTime>
+          <DepartureCity>San Francisco</DepartureCity>
+          <DepartureTime>03:12 PM</DepartureTime>
+          <FlightNumber>3223</FlightNumber>
+          <Price>177.47</Price>
+        </Flight>
+        <Flight>
+          <Airline>TWA</Airline>
+          <ArrivalCity>Los Angeles</ArrivalCity>
+          <ArrivalTime>05:17 PM</ArrivalTime>
+          <DepartureCity>San Francisco</DepartureCity>
+          <DepartureTime>04:33 PM</DepartureTime>
+          <FlightNumber>5353</FlightNumber>
+          <Price>126.4</Price>
+        </Flight>
+        <Flight>
+          <Airline>AA</Airline>
+          <ArrivalCity>Los Angeles</ArrivalCity>
+          <ArrivalTime>01:24 PM</ArrivalTime>
+          <DepartureCity>San Francisco</DepartureCity>
+          <DepartureTime>10:24 AM</DepartureTime>
+          <FlightNumber>6214</FlightNumber>
+          <Price>174.47</Price>
+        </Flight>
+        <Flight>
+          <Airline>TWA</Airline>
+          <ArrivalCity>Los Angeles</ArrivalCity>
+          <ArrivalTime>06:29 PM</ArrivalTime>
+          <DepartureCity>San Francisco</DepartureCity>
+          <DepartureTime>05:45 PM</DepartureTime>
+          <FlightNumber>6996</FlightNumber>
+          <Price>109.6</Price>
+        </Flight>
+        <Flight>
+          <Airline>TWA</Airline>
+          <ArrivalCity>Los Angeles</ArrivalCity>
+          <ArrivalTime>10:05 AM</ArrivalTime>
+          <DepartureCity>San Francisco</DepartureCity>
+          <DepartureTime>09:21 AM</DepartureTime>
+          <FlightNumber>7056</FlightNumber>
+          <Price>100.4</Price>
+        </Flight>
+        <Flight>
+          <Airline>TWA</Airline>
+          <ArrivalCity>Los Angeles</ArrivalCity>
+          <ArrivalTime>11:17 AM</ArrivalTime>
+          <DepartureCity>San Francisco</DepartureCity>
+          <DepartureTime>10:33 AM</DepartureTime>
+          <FlightNumber>7174</FlightNumber>
+          <Price>124.8</Price>
+        </Flight>
+        <Flight>
+          <Airline>TWA</Airline>
+          <ArrivalCity>Los Angeles</ArrivalCity>
+          <ArrivalTime>04:05 PM</ArrivalTime>
+          <DepartureCity>San Francisco</DepartureCity>
+          <DepartureTime>03:21 PM</DepartureTime>
+          <FlightNumber>8753</FlightNumber>
+          <Price>175.47</Price>
+        </Flight>
+      </GetFlightsResult>
+    </GetFlightsResponse>
+  </s:Body>
+</s:Envelope>
+
+2019-05-02 08:49:30,810 [9] INFO  UserLogger [(null)] - Structural Validation: True
+2019-05-02 08:49:30,814 [9] INFO  UserLogger [(null)] - Step 'GetFlights' ended successfully
+2019-05-02 08:49:30,815 [9] INFO  UserLogger [(null)] - Step 'CreateFlightOrder' : Step 'CreateFlightOrder' started
+2019-05-02 08:49:30,822 [9] DEBUG UserLogger [(null)] - Step 'CreateFlightOrder' : Parent Step: 'Sequence6'
+2019-05-02 08:49:30,825 [9] INFO  UserLogger [(null)] - 
+Request:
+
+<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/" xmlns:p1="http://www.w3.org/2001/XMLSchema-instance">
+  <Body>
+    <CreateFlightOrder xmlns="HP.SOAQ.SampleApp">
+      <FlightOrder>
+        <Class>Business</Class>
+        <CustomerName>Tim Leach</CustomerName>
+        <DepartureDate>2020-09-02T00:00:00-06:00</DepartureDate>
+        <FlightNumber>1657</FlightNumber>
+        <NumberOfTickets>2</NumberOfTickets>
+      </FlightOrder>
+    </CreateFlightOrder>
+  </Body>
+</Envelope>
+
+2019-05-02 08:49:30,826 [9] DEBUG UserLogger [(null)] - Encoding channel is processing the message
+2019-05-02 08:49:30,827 [9] DEBUG UserLogger [(null)] - Sending the following message: <Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/" xmlns:p1="http://www.w3.org/2001/XMLSchema-instance"><Body><CreateFlightOrder xmlns="HP.SOAQ.SampleApp"><FlightOrder><Class>Business</Class><CustomerName>Tim Leach</CustomerName><DepartureDate>2020-09-02T00:00:00-06:00</DepartureDate><FlightNumber>1657</FlightNumber><NumberOfTickets>2</NumberOfTickets></FlightOrder></CreateFlightOrder></Body></Envelope>
+2019-05-02 08:49:30,828 [9] DEBUG UserLogger [(null)] - HTTP channel is processing the message
+2019-05-02 08:49:30,829 [9] INFO  UserLogger [(null)] - URL: http://localhost:8000/HPFlights_SOAP
+2019-05-02 08:49:30,830 [9] DEBUG UserLogger [(null)] - Sending the request to the server
+2019-05-02 08:49:30,830 [9] DEBUG UserLogger [(null)] - 
+
+Request after processing:
+
+<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/" xmlns:p1="http://www.w3.org/2001/XMLSchema-instance">
+  <Body>
+    <CreateFlightOrder xmlns="HP.SOAQ.SampleApp">
+      <FlightOrder>
+        <Class>Business</Class>
+        <CustomerName>Tim Leach</CustomerName>
+        <DepartureDate>2020-09-02T00:00:00-06:00</DepartureDate>
+        <FlightNumber>1657</FlightNumber>
+        <NumberOfTickets>2</NumberOfTickets>
+      </FlightOrder>
+    </CreateFlightOrder>
+  </Body>
+</Envelope>
+
+
+2019-05-02 08:49:30,836 [9] INFO  UserLogger [(null)] - Returning the response to the previous channel
+2019-05-02 08:49:30,838 [9] DEBUG UserLogger [(null)] - HTTP channel - done
+2019-05-02 08:49:30,838 [9] DEBUG UserLogger [(null)] - Received the following message: <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Body><CreateFlightOrderResponse xmlns="HP.SOAQ.SampleApp"><CreateFlightOrderResult xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><OrderNumber>114</OrderNumber><TotalPrice>440</TotalPrice></CreateFlightOrderResult></CreateFlightOrderResponse></s:Body></s:Envelope>
+2019-05-02 08:49:30,839 [9] DEBUG UserLogger [(null)] - Encoding channel - done
+2019-05-02 08:49:30,840 [9] INFO  UserLogger [(null)] - 
+Response:
+
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Body>
+    <CreateFlightOrderResponse xmlns="HP.SOAQ.SampleApp">
+      <CreateFlightOrderResult xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+        <OrderNumber>114</OrderNumber>
+        <TotalPrice>440</TotalPrice>
+      </CreateFlightOrderResult>
+    </CreateFlightOrderResponse>
+  </s:Body>
+</s:Envelope>
+
+2019-05-02 08:49:30,842 [9] INFO  UserLogger [(null)] - Structural Validation: True
+2019-05-02 08:49:30,845 [9] INFO  UserLogger [(null)] - Checkpoint 2: "114" > "90" passed
+2019-05-02 08:49:30,847 [9] INFO  UserLogger [(null)] - Checkpoint 3: "440" < "1500" passed
+2019-05-02 08:49:30,849 [9] INFO  UserLogger [(null)] - Step 'CreateFlightOrder' ended successfully
+2019-05-02 08:49:30,850 [9] INFO  UserLogger [(null)] - Step 'Iteration 1' ended successfully
+2019-05-02 08:49:30,854 [9] INFO  UserLogger [(null)] - Step 'Iteration 2' : Step 'Iteration 2' started
+2019-05-02 08:49:30,855 [9] DEBUG UserLogger [(null)] - Step 'Iteration 2' : Parent Step: 'Loop2'
+2019-05-02 08:49:30,857 [9] INFO  UserLogger [(null)] - Step 'GetFlights' : Step 'GetFlights' started
+2019-05-02 08:49:30,857 [9] DEBUG UserLogger [(null)] - Step 'GetFlights' : Parent Step: 'Sequence6'
+2019-05-02 08:49:30,859 [9] INFO  UserLogger [(null)] - 
+Request:
+
+<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
+  <Body>
+    <GetFlights xmlns="HP.SOAQ.SampleApp">
+      <DepartureCity>Denver</DepartureCity>
+      <ArrivalCity>Los Angeles</ArrivalCity>
+      <FlightDate>2020-09-02T00:00:00-06:00</FlightDate>
+    </GetFlights>
+  </Body>
+</Envelope>
+
+2019-05-02 08:49:30,860 [9] DEBUG UserLogger [(null)] - Encoding channel is processing the message
+2019-05-02 08:49:30,861 [9] DEBUG UserLogger [(null)] - Sending the following message: <Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
+  <Body>
+    <GetFlights xmlns="HP.SOAQ.SampleApp">
+      <DepartureCity>Denver</DepartureCity>
+      <ArrivalCity>Los Angeles</ArrivalCity>
+      <FlightDate>2020-09-02T00:00:00-06:00</FlightDate>
+    </GetFlights>
+  </Body>
+</Envelope>
+2019-05-02 08:49:30,862 [9] DEBUG UserLogger [(null)] - HTTP channel is processing the message
+2019-05-02 08:49:30,863 [9] INFO  UserLogger [(null)] - URL: http://localhost:8000/HPFlights_SOAP
+2019-05-02 08:49:30,863 [9] DEBUG UserLogger [(null)] - Sending the request to the server
+2019-05-02 08:49:30,864 [9] DEBUG UserLogger [(null)] - 
+
+Request after processing:
+
+<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
+  <Body>
+    <GetFlights xmlns="HP.SOAQ.SampleApp">
+      <DepartureCity>Denver</DepartureCity>
+      <ArrivalCity>Los Angeles</ArrivalCity>
+      <FlightDate>2020-09-02T00:00:00-06:00</FlightDate>
+    </GetFlights>
+  </Body>
+</Envelope>
+
+
+2019-05-02 08:49:30,869 [9] INFO  UserLogger [(null)] - Returning the response to the previous channel
+2019-05-02 08:49:30,870 [9] DEBUG UserLogger [(null)] - HTTP channel - done
+2019-05-02 08:49:30,871 [9] DEBUG UserLogger [(null)] - Received the following message: <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Body><GetFlightsResponse xmlns="HP.SOAQ.SampleApp"><GetFlightsResult xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><Flight><Airline>TWA</Airline><ArrivalCity>Los Angeles</ArrivalCity><ArrivalTime>11:06 AM</ArrivalTime><DepartureCity>Denver</DepartureCity><DepartureTime>10:09 AM</DepartureTime><FlightNumber>2880</FlightNumber><Price>134.8</Price></Flight><Flight><Airline>TWA</Airline><ArrivalCity>Los Angeles</ArrivalCity><ArrivalTime>02:43 PM</ArrivalTime><DepartureCity>Denver</DepartureCity><DepartureTime>01:45 PM</DepartureTime><FlightNumber>3019</FlightNumber><Price>124</Price></Flight><Flight><Airline>TWA</Airline><ArrivalCity>Los Angeles</ArrivalCity><ArrivalTime>07:31 PM</ArrivalTime><DepartureCity>Denver</DepartureCity><DepartureTime>06:33 PM</DepartureTime><FlightNumber>3740</FlightNumber><Price>126.8</Price></Flight><Flight><Airline>TWA</Airline><ArrivalCity>Los Angeles</ArrivalCity><ArrivalTime>03:55 PM</ArrivalTime><DepartureCity>Denver</DepartureCity><DepartureTime>02:57 PM</DepartureTime><FlightNumber>4661</FlightNumber><Price>107.2</Price></Flight><Flight><Airline>TWA</Airline><ArrivalCity>Los Angeles</ArrivalCity><ArrivalTime>12:18 PM</ArrivalTime><DepartureCity>Denver</DepartureCity><DepartureTime>11:21 AM</DepartureTime><FlightNumber>4777</FlightNumber><Price>110.8</Price></Flight><Flight><Airline>TWA</Airline><ArrivalCity>Los Angeles</ArrivalCity><ArrivalTime>01:31 PM</ArrivalTime><DepartureCity>Denver</DepartureCity><DepartureTime>12:33 PM</DepartureTime><FlightNumber>6142</FlightNumber><Price>121.2</Price></Flight><Flight><Airline>AA</Airline><ArrivalCity>Los Angeles</ArrivalCity><ArrivalTime>01:30 PM</ArrivalTime><DepartureCity>Denver</DepartureCity><DepartureTime>10:10 AM</DepartureTime><FlightNumber>6305</FlightNumber><Price>295</Price></Flight><Flight><Airline>UA</Airline><ArrivalCity>Los Angeles</ArrivalCity><ArrivalTime>02:50 PM</ArrivalTime><DepartureCity>Denver</DepartureCity><DepartureTime>11:30 AM</DepartureTime><FlightNumber>6306</FlightNumber><Price>255</Price></Flight><Flight><Airline>UA</Airline><ArrivalCity>Los Angeles</ArrivalCity><ArrivalTime>05:00 PM</ArrivalTime><DepartureCity>Denver</DepartureCity><DepartureTime>01:00 PM</DepartureTime><FlightNumber>6307</FlightNumber><Price>245</Price></Flight><Flight><Airline>AA</Airline><ArrivalCity>Los Angeles</ArrivalCity><ArrivalTime>06:00 PM</ArrivalTime><DepartureCity>Denver</DepartureCity><DepartureTime>03:00 PM</DepartureTime><FlightNumber>6308</FlightNumber><Price>230</Price></Flight><Flight><Airline>AA</Airline><ArrivalCity>Los Angeles</ArrivalCity><ArrivalTime>10:30 PM</ArrivalTime><DepartureCity>Denver</DepartureCity><DepartureTime>07:00 PM</DepartureTime><FlightNumber>6309</FlightNumber><Price>199</Price></Flight><Flight><Airline>TWA</Airline><ArrivalCity>Los Angeles</ArrivalCity><ArrivalTime>05:07 PM</ArrivalTime><DepartureCity>Denver</DepartureCity><DepartureTime>04:09 PM</DepartureTime><FlightNumber>7574</FlightNumber><Price>136</Price></Flight><Flight><Airline>TWA</Airline><ArrivalCity>Los Angeles</ArrivalCity><ArrivalTime>08:42 AM</ArrivalTime><DepartureCity>Denver</DepartureCity><DepartureTime>07:45 AM</DepartureTime><FlightNumber>8649</FlightNumber><Price>134.4</Price></Flight></GetFlightsResult></GetFlightsResponse></s:Body></s:Envelope>
+2019-05-02 08:49:30,871 [9] DEBUG UserLogger [(null)] - Encoding channel - done
+2019-05-02 08:49:30,873 [9] INFO  UserLogger [(null)] - 
+Response:
+
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Body>
+    <GetFlightsResponse xmlns="HP.SOAQ.SampleApp">
+      <GetFlightsResult xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+        <Flight>
+          <Airline>TWA</Airline>
+          <ArrivalCity>Los Angeles</ArrivalCity>
+          <ArrivalTime>11:06 AM</ArrivalTime>
+          <DepartureCity>Denver</DepartureCity>
+          <DepartureTime>10:09 AM</DepartureTime>
+          <FlightNumber>2880</FlightNumber>
+          <Price>134.8</Price>
+        </Flight>
+        <Flight>
+          <Airline>TWA</Airline>
+          <ArrivalCity>Los Angeles</ArrivalCity>
+          <ArrivalTime>02:43 PM</ArrivalTime>
+          <DepartureCity>Denver</DepartureCity>
+          <DepartureTime>01:45 PM</DepartureTime>
+          <FlightNumber>3019</FlightNumber>
+          <Price>124</Price>
+        </Flight>
+        <Flight>
+          <Airline>TWA</Airline>
+          <ArrivalCity>Los Angeles</ArrivalCity>
+          <ArrivalTime>07:31 PM</ArrivalTime>
+          <DepartureCity>Denver</DepartureCity>
+          <DepartureTime>06:33 PM</DepartureTime>
+          <FlightNumber>3740</FlightNumber>
+          <Price>126.8</Price>
+        </Flight>
+        <Flight>
+          <Airline>TWA</Airline>
+          <ArrivalCity>Los Angeles</ArrivalCity>
+          <ArrivalTime>03:55 PM</ArrivalTime>
+          <DepartureCity>Denver</DepartureCity>
+          <DepartureTime>02:57 PM</DepartureTime>
+          <FlightNumber>4661</FlightNumber>
+          <Price>107.2</Price>
+        </Flight>
+        <Flight>
+          <Airline>TWA</Airline>
+          <ArrivalCity>Los Angeles</ArrivalCity>
+          <ArrivalTime>12:18 PM</ArrivalTime>
+          <DepartureCity>Denver</DepartureCity>
+          <DepartureTime>11:21 AM</DepartureTime>
+          <FlightNumber>4777</FlightNumber>
+          <Price>110.8</Price>
+        </Flight>
+        <Flight>
+          <Airline>TWA</Airline>
+          <ArrivalCity>Los Angeles</ArrivalCity>
+          <ArrivalTime>01:31 PM</ArrivalTime>
+          <DepartureCity>Denver</DepartureCity>
+          <DepartureTime>12:33 PM</DepartureTime>
+          <FlightNumber>6142</FlightNumber>
+          <Price>121.2</Price>
+        </Flight>
+        <Flight>
+          <Airline>AA</Airline>
+          <ArrivalCity>Los Angeles</ArrivalCity>
+          <ArrivalTime>01:30 PM</ArrivalTime>
+          <DepartureCity>Denver</DepartureCity>
+          <DepartureTime>10:10 AM</DepartureTime>
+          <FlightNumber>6305</FlightNumber>
+          <Price>295</Price>
+        </Flight>
+        <Flight>
+          <Airline>UA</Airline>
+          <ArrivalCity>Los Angeles</ArrivalCity>
+          <ArrivalTime>02:50 PM</ArrivalTime>
+          <DepartureCity>Denver</DepartureCity>
+          <DepartureTime>11:30 AM</DepartureTime>
+          <FlightNumber>6306</FlightNumber>
+          <Price>255</Price>
+        </Flight>
+        <Flight>
+          <Airline>UA</Airline>
+          <ArrivalCity>Los Angeles</ArrivalCity>
+          <ArrivalTime>05:00 PM</ArrivalTime>
+          <DepartureCity>Denver</DepartureCity>
+          <DepartureTime>01:00 PM</DepartureTime>
+          <FlightNumber>6307</FlightNumber>
+          <Price>245</Price>
+        </Flight>
+        <Flight>
+          <Airline>AA</Airline>
+          <ArrivalCity>Los Angeles</ArrivalCity>
+          <ArrivalTime>06:00 PM</ArrivalTime>
+          <DepartureCity>Denver</DepartureCity>
+          <DepartureTime>03:00 PM</DepartureTime>
+          <FlightNumber>6308</FlightNumber>
+          <Price>230</Price>
+        </Flight>
+        <Flight>
+          <Airline>AA</Airline>
+          <ArrivalCity>Los Angeles</ArrivalCity>
+          <ArrivalTime>10:30 PM</ArrivalTime>
+          <DepartureCity>Denver</DepartureCity>
+          <DepartureTime>07:00 PM</DepartureTime>
+          <FlightNumber>6309</FlightNumber>
+          <Price>199</Price>
+        </Flight>
+        <Flight>
+          <Airline>TWA</Airline>
+          <ArrivalCity>Los Angeles</ArrivalCity>
+          <ArrivalTime>05:07 PM</ArrivalTime>
+          <DepartureCity>Denver</DepartureCity>
+          <DepartureTime>04:09 PM</DepartureTime>
+          <FlightNumber>7574</FlightNumber>
+          <Price>136</Price>
+        </Flight>
+        <Flight>
+          <Airline>TWA</Airline>
+          <ArrivalCity>Los Angeles</ArrivalCity>
+          <ArrivalTime>08:42 AM</ArrivalTime>
+          <DepartureCity>Denver</DepartureCity>
+          <DepartureTime>07:45 AM</DepartureTime>
+          <FlightNumber>8649</FlightNumber>
+          <Price>134.4</Price>
+        </Flight>
+      </GetFlightsResult>
+    </GetFlightsResponse>
+  </s:Body>
+</s:Envelope>
+
+2019-05-02 08:49:30,876 [9] INFO  UserLogger [(null)] - Structural Validation: True
+2019-05-02 08:49:30,878 [9] INFO  UserLogger [(null)] - Step 'GetFlights' ended successfully
+2019-05-02 08:49:30,879 [9] INFO  UserLogger [(null)] - Step 'CreateFlightOrder' : Step 'CreateFlightOrder' started
+2019-05-02 08:49:30,879 [9] DEBUG UserLogger [(null)] - Step 'CreateFlightOrder' : Parent Step: 'Sequence6'
+2019-05-02 08:49:30,882 [9] INFO  UserLogger [(null)] - 
+Request:
+
+<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/" xmlns:p1="http://www.w3.org/2001/XMLSchema-instance">
+  <Body>
+    <CreateFlightOrder xmlns="HP.SOAQ.SampleApp">
+      <FlightOrder>
+        <Class>Business</Class>
+        <CustomerName>Tim Leach</CustomerName>
+        <DepartureDate>2020-09-02T00:00:00-06:00</DepartureDate>
+        <FlightNumber>2880</FlightNumber>
+        <NumberOfTickets>2</NumberOfTickets>
+      </FlightOrder>
+    </CreateFlightOrder>
+  </Body>
+</Envelope>
+
+2019-05-02 08:49:30,884 [9] DEBUG UserLogger [(null)] - Encoding channel is processing the message
+2019-05-02 08:49:30,885 [9] DEBUG UserLogger [(null)] - Sending the following message: <Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/" xmlns:p1="http://www.w3.org/2001/XMLSchema-instance"><Body><CreateFlightOrder xmlns="HP.SOAQ.SampleApp"><FlightOrder><Class>Business</Class><CustomerName>Tim Leach</CustomerName><DepartureDate>2020-09-02T00:00:00-06:00</DepartureDate><FlightNumber>2880</FlightNumber><NumberOfTickets>2</NumberOfTickets></FlightOrder></CreateFlightOrder></Body></Envelope>
+2019-05-02 08:49:30,886 [9] DEBUG UserLogger [(null)] - HTTP channel is processing the message
+2019-05-02 08:49:30,887 [9] INFO  UserLogger [(null)] - URL: http://localhost:8000/HPFlights_SOAP
+2019-05-02 08:49:30,888 [9] DEBUG UserLogger [(null)] - Sending the request to the server
+2019-05-02 08:49:30,889 [9] DEBUG UserLogger [(null)] - 
+
+Request after processing:
+
+<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/" xmlns:p1="http://www.w3.org/2001/XMLSchema-instance">
+  <Body>
+    <CreateFlightOrder xmlns="HP.SOAQ.SampleApp">
+      <FlightOrder>
+        <Class>Business</Class>
+        <CustomerName>Tim Leach</CustomerName>
+        <DepartureDate>2020-09-02T00:00:00-06:00</DepartureDate>
+        <FlightNumber>2880</FlightNumber>
+        <NumberOfTickets>2</NumberOfTickets>
+      </FlightOrder>
+    </CreateFlightOrder>
+  </Body>
+</Envelope>
+
+
+2019-05-02 08:49:30,893 [9] INFO  UserLogger [(null)] - Returning the response to the previous channel
+2019-05-02 08:49:30,894 [9] DEBUG UserLogger [(null)] - HTTP channel - done
+2019-05-02 08:49:30,895 [9] DEBUG UserLogger [(null)] - Received the following message: <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Body><CreateFlightOrderResponse xmlns="HP.SOAQ.SampleApp"><CreateFlightOrderResult xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><OrderNumber>115</OrderNumber><TotalPrice>539.2</TotalPrice></CreateFlightOrderResult></CreateFlightOrderResponse></s:Body></s:Envelope>
+2019-05-02 08:49:30,895 [9] DEBUG UserLogger [(null)] - Encoding channel - done
+2019-05-02 08:49:30,896 [9] INFO  UserLogger [(null)] - 
+Response:
+
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Body>
+    <CreateFlightOrderResponse xmlns="HP.SOAQ.SampleApp">
+      <CreateFlightOrderResult xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+        <OrderNumber>115</OrderNumber>
+        <TotalPrice>539.2</TotalPrice>
+      </CreateFlightOrderResult>
+    </CreateFlightOrderResponse>
+  </s:Body>
+</s:Envelope>
+
+2019-05-02 08:49:30,899 [9] INFO  UserLogger [(null)] - Structural Validation: True
+2019-05-02 08:49:30,901 [9] INFO  UserLogger [(null)] - Checkpoint 2: "115" > "90" passed
+2019-05-02 08:49:30,902 [9] INFO  UserLogger [(null)] - Checkpoint 3: "539.2" < "1500" passed
+2019-05-02 08:49:30,906 [9] INFO  UserLogger [(null)] - Step 'CreateFlightOrder' ended successfully
+2019-05-02 08:49:30,908 [9] INFO  UserLogger [(null)] - Step 'Iteration 2' ended successfully
+2019-05-02 08:49:30,910 [9] INFO  UserLogger [(null)] - Step 'Iteration 3' : Step 'Iteration 3' started
+2019-05-02 08:49:30,911 [9] DEBUG UserLogger [(null)] - Step 'Iteration 3' : Parent Step: 'Loop2'
+2019-05-02 08:49:30,912 [9] INFO  UserLogger [(null)] - Step 'GetFlights' : Step 'GetFlights' started
+2019-05-02 08:49:30,913 [9] DEBUG UserLogger [(null)] - Step 'GetFlights' : Parent Step: 'Sequence6'
+2019-05-02 08:49:30,914 [9] INFO  UserLogger [(null)] - 
+Request:
+
+<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
+  <Body>
+    <GetFlights xmlns="HP.SOAQ.SampleApp">
+      <DepartureCity>Portland</DepartureCity>
+      <ArrivalCity>Denver</ArrivalCity>
+      <FlightDate>2020-09-02T00:00:00-06:00</FlightDate>
+    </GetFlights>
+  </Body>
+</Envelope>
+
+2019-05-02 08:49:30,916 [9] DEBUG UserLogger [(null)] - Encoding channel is processing the message
+2019-05-02 08:49:30,918 [9] DEBUG UserLogger [(null)] - Sending the following message: <Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
+  <Body>
+    <GetFlights xmlns="HP.SOAQ.SampleApp">
+      <DepartureCity>Portland</DepartureCity>
+      <ArrivalCity>Denver</ArrivalCity>
+      <FlightDate>2020-09-02T00:00:00-06:00</FlightDate>
+    </GetFlights>
+  </Body>
+</Envelope>
+2019-05-02 08:49:30,926 [9] DEBUG UserLogger [(null)] - HTTP channel is processing the message
+2019-05-02 08:49:30,926 [9] INFO  UserLogger [(null)] - URL: http://localhost:8000/HPFlights_SOAP
+2019-05-02 08:49:30,927 [9] DEBUG UserLogger [(null)] - Sending the request to the server
+2019-05-02 08:49:30,928 [9] DEBUG UserLogger [(null)] - 
+
+Request after processing:
+
+<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/">
+  <Body>
+    <GetFlights xmlns="HP.SOAQ.SampleApp">
+      <DepartureCity>Portland</DepartureCity>
+      <ArrivalCity>Denver</ArrivalCity>
+      <FlightDate>2020-09-02T00:00:00-06:00</FlightDate>
+    </GetFlights>
+  </Body>
+</Envelope>
+
+
+2019-05-02 08:49:30,931 [9] INFO  UserLogger [(null)] - Returning the response to the previous channel
+2019-05-02 08:49:30,933 [9] DEBUG UserLogger [(null)] - HTTP channel - done
+2019-05-02 08:49:30,934 [9] DEBUG UserLogger [(null)] - Received the following message: <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Body><GetFlightsResponse xmlns="HP.SOAQ.SampleApp"><GetFlightsResult xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><Flight><Airline>DL</Airline><ArrivalCity>Denver</ArrivalCity><ArrivalTime>11:00 AM</ArrivalTime><DepartureCity>Portland</DepartureCity><DepartureTime>08:00 AM</DepartureTime><FlightNumber>2212</FlightNumber><Price>260.8</Price></Flight><Flight><Airline>DL</Airline><ArrivalCity>Denver</ArrivalCity><ArrivalTime>03:48 PM</ArrivalTime><DepartureCity>Portland</DepartureCity><DepartureTime>12:48 PM</DepartureTime><FlightNumber>2220</FlightNumber><Price>253.6</Price></Flight><Flight><Airline>DL</Airline><ArrivalCity>Denver</ArrivalCity><ArrivalTime>06:12 PM</ArrivalTime><DepartureCity>Portland</DepartureCity><DepartureTime>03:12 PM</DepartureTime><FlightNumber>2224</FlightNumber><Price>257.6</Price></Flight><Flight><Airline>TWA</Airline><ArrivalCity>Denver</ArrivalCity><ArrivalTime>05:58 PM</ArrivalTime><DepartureCity>Portland</DepartureCity><DepartureTime>04:17 PM</DepartureTime><FlightNumber>3526</FlightNumber><Price>153.8</Price></Flight><Flight><Airline>TWA</Airline><ArrivalCity>Denver</ArrivalCity><ArrivalTime>08:22 PM</ArrivalTime><DepartureCity>Portland</DepartureCity><DepartureTime>06:41 PM</DepartureTime><FlightNumber>4110</FlightNumber><Price>149</Price></Flight><Flight><Airline>TWA</Airline><ArrivalCity>Denver</ArrivalCity><ArrivalTime>02:22 PM</ArrivalTime><DepartureCity>Portland</DepartureCity><DepartureTime>12:41 PM</DepartureTime><FlightNumber>4533</FlightNumber><Price>154.2</Price></Flight><Flight><Airline>TWA</Airline><ArrivalCity>Denver</ArrivalCity><ArrivalTime>09:34 AM</ArrivalTime><DepartureCity>Portland</DepartureCity><DepartureTime>07:53 AM</DepartureTime><FlightNumber>4828</FlightNumber><Price>163.8</Price></Flight><Flight><Airline>TWA</Airline><ArrivalCity>Denver</ArrivalCity><ArrivalTime>01:10 PM</ArrivalTime><DepartureCity>Portland</DepartureCity><DepartureTime>11:29 AM</DepartureTime><FlightNumber>7723</FlightNumber><Price>165.8</Price></Flight><Flight><Airline>TWA</Airline><ArrivalCity>Denver</ArrivalCity><ArrivalTime>10:46 AM</ArrivalTime><DepartureCity>Portland</DepartureCity><DepartureTime>09:05 AM</DepartureTime><FlightNumber>8248</FlightNumber><Price>179</Price></Flight><Flight><Airline>TWA</Airline><ArrivalCity>Denver</ArrivalCity><ArrivalTime>04:46 PM</ArrivalTime><DepartureCity>Portland</DepartureCity><DepartureTime>03:05 PM</DepartureTime><FlightNumber>8581</FlightNumber><Price>179.8</Price></Flight><Flight><Airline>TWA</Airline><ArrivalCity>Denver</ArrivalCity><ArrivalTime>07:10 PM</ArrivalTime><DepartureCity>Portland</DepartureCity><DepartureTime>05:29 PM</DepartureTime><FlightNumber>8658</FlightNumber><Price>148.6</Price></Flight><Flight><Airline>TWA</Airline><ArrivalCity>Denver</ArrivalCity><ArrivalTime>03:34 PM</ArrivalTime><DepartureCity>Portland</DepartureCity><DepartureTime>01:53 PM</DepartureTime><FlightNumber>8970</FlightNumber><Price>181.8</Price></Flight><Flight><Airline>TWA</Airline><ArrivalCity>Denver</ArrivalCity><ArrivalTime>11:58 AM</ArrivalTime><DepartureCity>Portland</DepartureCity><DepartureTime>10:17 AM</DepartureTime><FlightNumber>9074</FlightNumber><Price>174.6</Price></Flight></GetFlightsResult></GetFlightsResponse></s:Body></s:Envelope>
+2019-05-02 08:49:30,935 [9] DEBUG UserLogger [(null)] - Encoding channel - done
+2019-05-02 08:49:30,936 [9] INFO  UserLogger [(null)] - 
+Response:
+
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Body>
+    <GetFlightsResponse xmlns="HP.SOAQ.SampleApp">
+      <GetFlightsResult xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+        <Flight>
+          <Airline>DL</Airline>
+          <ArrivalCity>Denver</ArrivalCity>
+          <ArrivalTime>11:00 AM</ArrivalTime>
+          <DepartureCity>Portland</DepartureCity>
+          <DepartureTime>08:00 AM</DepartureTime>
+          <FlightNumber>2212</FlightNumber>
+          <Price>260.8</Price>
+        </Flight>
+        <Flight>
+          <Airline>DL</Airline>
+          <ArrivalCity>Denver</ArrivalCity>
+          <ArrivalTime>03:48 PM</ArrivalTime>
+          <DepartureCity>Portland</DepartureCity>
+          <DepartureTime>12:48 PM</DepartureTime>
+          <FlightNumber>2220</FlightNumber>
+          <Price>253.6</Price>
+        </Flight>
+        <Flight>
+          <Airline>DL</Airline>
+          <ArrivalCity>Denver</ArrivalCity>
+          <ArrivalTime>06:12 PM</ArrivalTime>
+          <DepartureCity>Portland</DepartureCity>
+          <DepartureTime>03:12 PM</DepartureTime>
+          <FlightNumber>2224</FlightNumber>
+          <Price>257.6</Price>
+        </Flight>
+        <Flight>
+          <Airline>TWA</Airline>
+          <ArrivalCity>Denver</ArrivalCity>
+          <ArrivalTime>05:58 PM</ArrivalTime>
+          <DepartureCity>Portland</DepartureCity>
+          <DepartureTime>04:17 PM</DepartureTime>
+          <FlightNumber>3526</FlightNumber>
+          <Price>153.8</Price>
+        </Flight>
+        <Flight>
+          <Airline>TWA</Airline>
+          <ArrivalCity>Denver</ArrivalCity>
+          <ArrivalTime>08:22 PM</ArrivalTime>
+          <DepartureCity>Portland</DepartureCity>
+          <DepartureTime>06:41 PM</DepartureTime>
+          <FlightNumber>4110</FlightNumber>
+          <Price>149</Price>
+        </Flight>
+        <Flight>
+          <Airline>TWA</Airline>
+          <ArrivalCity>Denver</ArrivalCity>
+          <ArrivalTime>02:22 PM</ArrivalTime>
+          <DepartureCity>Portland</DepartureCity>
+          <DepartureTime>12:41 PM</DepartureTime>
+          <FlightNumber>4533</FlightNumber>
+          <Price>154.2</Price>
+        </Flight>
+        <Flight>
+          <Airline>TWA</Airline>
+          <ArrivalCity>Denver</ArrivalCity>
+          <ArrivalTime>09:34 AM</ArrivalTime>
+          <DepartureCity>Portland</DepartureCity>
+          <DepartureTime>07:53 AM</DepartureTime>
+          <FlightNumber>4828</FlightNumber>
+          <Price>163.8</Price>
+        </Flight>
+        <Flight>
+          <Airline>TWA</Airline>
+          <ArrivalCity>Denver</ArrivalCity>
+          <ArrivalTime>01:10 PM</ArrivalTime>
+          <DepartureCity>Portland</DepartureCity>
+          <DepartureTime>11:29 AM</DepartureTime>
+          <FlightNumber>7723</FlightNumber>
+          <Price>165.8</Price>
+        </Flight>
+        <Flight>
+          <Airline>TWA</Airline>
+          <ArrivalCity>Denver</ArrivalCity>
+          <ArrivalTime>10:46 AM</ArrivalTime>
+          <DepartureCity>Portland</DepartureCity>
+          <DepartureTime>09:05 AM</DepartureTime>
+          <FlightNumber>8248</FlightNumber>
+          <Price>179</Price>
+        </Flight>
+        <Flight>
+          <Airline>TWA</Airline>
+          <ArrivalCity>Denver</ArrivalCity>
+          <ArrivalTime>04:46 PM</ArrivalTime>
+          <DepartureCity>Portland</DepartureCity>
+          <DepartureTime>03:05 PM</DepartureTime>
+          <FlightNumber>8581</FlightNumber>
+          <Price>179.8</Price>
+        </Flight>
+        <Flight>
+          <Airline>TWA</Airline>
+          <ArrivalCity>Denver</ArrivalCity>
+          <ArrivalTime>07:10 PM</ArrivalTime>
+          <DepartureCity>Portland</DepartureCity>
+          <DepartureTime>05:29 PM</DepartureTime>
+          <FlightNumber>8658</FlightNumber>
+          <Price>148.6</Price>
+        </Flight>
+        <Flight>
+          <Airline>TWA</Airline>
+          <ArrivalCity>Denver</ArrivalCity>
+          <ArrivalTime>03:34 PM</ArrivalTime>
+          <DepartureCity>Portland</DepartureCity>
+          <DepartureTime>01:53 PM</DepartureTime>
+          <FlightNumber>8970</FlightNumber>
+          <Price>181.8</Price>
+        </Flight>
+        <Flight>
+          <Airline>TWA</Airline>
+          <ArrivalCity>Denver</ArrivalCity>
+          <ArrivalTime>11:58 AM</ArrivalTime>
+          <DepartureCity>Portland</DepartureCity>
+          <DepartureTime>10:17 AM</DepartureTime>
+          <FlightNumber>9074</FlightNumber>
+          <Price>174.6</Price>
+        </Flight>
+      </GetFlightsResult>
+    </GetFlightsResponse>
+  </s:Body>
+</s:Envelope>
+
+2019-05-02 08:49:30,939 [9] INFO  UserLogger [(null)] - Structural Validation: True
+2019-05-02 08:49:30,953 [9] INFO  UserLogger [(null)] - Step 'GetFlights' ended successfully
+2019-05-02 08:49:30,953 [9] INFO  UserLogger [(null)] - Step 'CreateFlightOrder' : Step 'CreateFlightOrder' started
+2019-05-02 08:49:30,953 [9] DEBUG UserLogger [(null)] - Step 'CreateFlightOrder' : Parent Step: 'Sequence6'
+2019-05-02 08:49:30,953 [9] INFO  UserLogger [(null)] - 
+Request:
+
+<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/" xmlns:p1="http://www.w3.org/2001/XMLSchema-instance">
+  <Body>
+    <CreateFlightOrder xmlns="HP.SOAQ.SampleApp">
+      <FlightOrder>
+        <Class>Business</Class>
+        <CustomerName>Tim Leach</CustomerName>
+        <DepartureDate>2020-09-02T00:00:00-06:00</DepartureDate>
+        <FlightNumber>2212</FlightNumber>
+        <NumberOfTickets>2</NumberOfTickets>
+      </FlightOrder>
+    </CreateFlightOrder>
+  </Body>
+</Envelope>
+
+2019-05-02 08:49:30,953 [9] DEBUG UserLogger [(null)] - Encoding channel is processing the message
+2019-05-02 08:49:30,953 [9] DEBUG UserLogger [(null)] - Sending the following message: <Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/" xmlns:p1="http://www.w3.org/2001/XMLSchema-instance"><Body><CreateFlightOrder xmlns="HP.SOAQ.SampleApp"><FlightOrder><Class>Business</Class><CustomerName>Tim Leach</CustomerName><DepartureDate>2020-09-02T00:00:00-06:00</DepartureDate><FlightNumber>2212</FlightNumber><NumberOfTickets>2</NumberOfTickets></FlightOrder></CreateFlightOrder></Body></Envelope>
+2019-05-02 08:49:30,953 [9] DEBUG UserLogger [(null)] - HTTP channel is processing the message
+2019-05-02 08:49:30,953 [9] INFO  UserLogger [(null)] - URL: http://localhost:8000/HPFlights_SOAP
+2019-05-02 08:49:30,953 [9] DEBUG UserLogger [(null)] - Sending the request to the server
+2019-05-02 08:49:30,953 [9] DEBUG UserLogger [(null)] - 
+
+Request after processing:
+
+<Envelope xmlns="http://schemas.xmlsoap.org/soap/envelope/" xmlns:p1="http://www.w3.org/2001/XMLSchema-instance">
+  <Body>
+    <CreateFlightOrder xmlns="HP.SOAQ.SampleApp">
+      <FlightOrder>
+        <Class>Business</Class>
+        <CustomerName>Tim Leach</CustomerName>
+        <DepartureDate>2020-09-02T00:00:00-06:00</DepartureDate>
+        <FlightNumber>2212</FlightNumber>
+        <NumberOfTickets>2</NumberOfTickets>
+      </FlightOrder>
+    </CreateFlightOrder>
+  </Body>
+</Envelope>
+
+
+2019-05-02 08:49:30,969 [9] INFO  UserLogger [(null)] - Returning the response to the previous channel
+2019-05-02 08:49:30,969 [9] DEBUG UserLogger [(null)] - HTTP channel - done
+2019-05-02 08:49:30,969 [9] DEBUG UserLogger [(null)] - Received the following message: <s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/"><s:Body><CreateFlightOrderResponse xmlns="HP.SOAQ.SampleApp"><CreateFlightOrderResult xmlns:i="http://www.w3.org/2001/XMLSchema-instance"><OrderNumber>116</OrderNumber><TotalPrice>1043.2</TotalPrice></CreateFlightOrderResult></CreateFlightOrderResponse></s:Body></s:Envelope>
+2019-05-02 08:49:30,969 [9] DEBUG UserLogger [(null)] - Encoding channel - done
+2019-05-02 08:49:30,969 [9] INFO  UserLogger [(null)] - 
+Response:
+
+<s:Envelope xmlns:s="http://schemas.xmlsoap.org/soap/envelope/">
+  <s:Body>
+    <CreateFlightOrderResponse xmlns="HP.SOAQ.SampleApp">
+      <CreateFlightOrderResult xmlns:i="http://www.w3.org/2001/XMLSchema-instance">
+        <OrderNumber>116</OrderNumber>
+        <TotalPrice>1043.2</TotalPrice>
+      </CreateFlightOrderResult>
+    </CreateFlightOrderResponse>
+  </s:Body>
+</s:Envelope>
+
+2019-05-02 08:49:30,969 [9] INFO  UserLogger [(null)] - Structural Validation: True
+2019-05-02 08:49:30,969 [9] INFO  UserLogger [(null)] - Checkpoint 2: "116" > "90" passed
+2019-05-02 08:49:30,969 [9] INFO  UserLogger [(null)] - Checkpoint 3: "1043.2" < "1500" passed
+2019-05-02 08:49:30,969 [9] INFO  UserLogger [(null)] - Step 'CreateFlightOrder' ended successfully
+2019-05-02 08:49:30,969 [9] INFO  UserLogger [(null)] - Step 'Iteration 3' ended successfully
+2019-05-02 08:49:30,969 [9] INFO  UserLogger [(null)] - Step 'Test Flow' ended successfully
+2019-05-02 08:49:31,064 [9] INFO  UserLogger [(null)] - Step 'End' : Step 'End' started
+2019-05-02 08:49:31,064 [9] DEBUG UserLogger [(null)] - Step 'End' : Parent Step: 'test'
+2019-05-02 08:49:31,064 [9] INFO  UserLogger [(null)] - Step 'End' ended successfully

@@ -1,0 +1,1 @@
+-usr "C:\Users\demo\Desktop\New Folder\UFT_Training-master\LoadTesting1\LoadTesting1.usr" -msg_suffix_enable 0 -out "C:\Users\demo\Desktop\New Folder\UFT_Training-master\LoadTesting1\" -drv_log_file "C:\Users\demo\Desktop\New Folder\UFT_Training-master\LoadTesting1\mdrv.log" -cfg "C:\Users\demo\Desktop\New Folder\UFT_Training-master\LoadTesting1\default.cfg" -product_name vugen
